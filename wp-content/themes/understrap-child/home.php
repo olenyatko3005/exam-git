@@ -36,6 +36,7 @@ $container   = get_theme_mod( 'understrap_container_fluid_type' );
 								<div class="article-text-style">
 									<h2><a href="<?php echo get_permalink(); ?>">
 										<?php the_title(); ?>
+										<!-- sdsdsd -->
 									</a></h2>
 									<?php the_excerpt(); ?>
 								</div>
