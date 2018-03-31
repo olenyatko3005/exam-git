@@ -1,14 +1,14 @@
 <?php
 function the_breadcrumb() {
-		echo '<ul id="crumbs">';
+		echo '<ul id="crumbs" class="breadcrumb-style">';
 	if (!is_home()) {
-		echo '<li><a href="';
+		echo '<li class="breadcrumb-item"><a href="';
 		echo get_option('home');
 		echo '">';
 		echo 'Home';
 		echo "</a></li>";
 		if (is_category() || is_single()) {
-			echo '<li>';
+			echo '<li class="breadcrumb-item">';
 			the_category(' </li><li> ');
 			if (is_single()) {
 				echo "</li><li>";
@@ -16,13 +16,13 @@ function the_breadcrumb() {
 				echo '</li>';
 			}
 		} elseif (is_page()) {
-			echo '<li>';
+			echo '<li class="breadcrumb-item">';
 			echo the_title();
 			echo '</li>';
 		}
 	}
 	elseif (is_home()) { 
-		echo '<li><a href="';
+		echo '<li class="breadcrumb-item"><a href="';
 		echo get_option('home');
 		echo '">';
 		echo 'Home';

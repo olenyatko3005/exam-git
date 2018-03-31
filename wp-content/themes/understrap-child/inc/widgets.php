@@ -50,15 +50,6 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 	 */
 	function understrap_widgets_init() {
 		register_sidebar( array(
-			'name'          => __( 'Footer left sone', 'understrap' ),
-			'id'            => 'footer-left-sone',
-			'description'   => __( 'Left sidebar widget area', 'understrap'),
-			'before_widget' => '<div class="widget %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="footer-blogs-title">',
-			'after_title'   => '</h3>',
-		) );
-		register_sidebar( array(
 			'name'          => __( 'Footer right sone', 'understrap' ),
 			'id'            => 'footer-right-sone',
 			'description'   => __( 'Right sidebar widget area', 'understrap'),
@@ -68,24 +59,12 @@ if ( ! function_exists( 'understrap_widgets_init' ) ) {
 			'after_title'   => '</h3>',
 		) );
 		register_sidebar( array(
-			'name'          => __( 'sidebar', 'understrap' ),
-			'id'            => 'sidebar-sone',
-			'description'   => __( 'sidebar widget area', 'understrap'),
-			'before_widget' => '<div class="widget aside-block %2$s">',
+			'name'          => __( 'Blog', 'understrap' ),
+			'id'            => 'blog-sone',
+			'description'   => __( 'blog widget area', 'understrap'),
+			'before_widget' => '<div class="blog-search">',
 			'after_widget'  => '</div>',
-			'before_title'  => '<h3>',
-			'after_title'   => '</h3>',
 		) );
-		register_sidebar( array(
-			'name'          => __( 'Right sidebar Email', 'understrap' ),
-			'id'            => 'sidebar-email',
-			'description'   => __( 'Right sidebar Email', 'understrap'),
-			'before_widget' => '<div class="widget aside-email %2$s">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h3>',
-			'after_title'   => '</h3>',
-		) );
-
 	}
 } // endif function_exists( 'understrap_widgets_init' ).
 add_action( 'widgets_init', 'understrap_widgets_init' );

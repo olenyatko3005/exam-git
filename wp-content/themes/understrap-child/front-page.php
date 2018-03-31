@@ -23,20 +23,23 @@ $container   = get_theme_mod( 'understrap_container_fluid_type' );
 			<?php  
 			while ( have_rows('modules') ) : the_row(); 
 				switch ( get_row_layout() ) {
-					case 'test1': 
-						get_template_part('/page-templates/modules/test1');
+					case 'story': 
+						get_template_part('/page-templates/modules/story');
 						break;
-					case 'test2': 
-						get_template_part('/page-templates/modules/test2');
+					case 'process': 
+						get_template_part('/page-templates/modules/process');
 						break;
-					case 'test3': 
-						get_template_part('/page-templates/modules/test3');
+					case 'about': 
+						get_template_part('/page-templates/modules/about');
 						break;
-					case 'test4': 
-						get_template_part('/page-templates/modules/test4');
+					case 'family': 
+						get_template_part('/page-templates/modules/family');
 						break;
-					case 'slider': 
-						get_template_part('/page-templates/modules/slider');
+					case 'testimonials': 
+						get_template_part('/page-templates/modules/testimonials');
+						break;
+					case 'build': 
+						get_template_part('/page-templates/modules/build');
 						break;
 					default: 
 						break;

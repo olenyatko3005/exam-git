@@ -1,11 +1,8 @@
 //header
 
-.button-style-click .active {
-	//background-image: url(../img/close.png);
-}
 
 .header-style {
-	background-color: $background-color-nav;
+	background-color: #000000;
 }
 
 .nav-style {
@@ -16,7 +13,6 @@
 	.navbar-nav a.nav-link {
 		text-align: center;
 		font-size: 1.6rem;
-		text-transform: uppercase;
 		color: $main-font-color;
 		&:hover,
 		&:active, &:focus {
@@ -35,4 +31,8 @@
 	&:focus {
 		outline: none;
 	}
+}
+
+.navbar-light .navbar-brand {
+	filter: brightness(0) invert(1);
 }

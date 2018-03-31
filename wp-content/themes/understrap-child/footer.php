@@ -13,48 +13,18 @@ $container   = get_theme_mod( 'understrap_container_fluid_type' );
 
 <?php get_sidebar( 'footerfull' ); ?>
 
-<div class="wrapper" id="wrapper-footer">
-
-	<div class="understrap_container_fluid_type">
-		<footer class="footer-style">
-			<div class="footer-style-info">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-6 footer-style-left-sone">
-							<div><?php dynamic_sidebar( 'footer-left-sone' ); ?></div>
-							<ul>
-								<li class="row">
-									<a class="col-2" href="tel:<?php echo get_theme_mod( 'phone_number_first' ); ?>"><i class="fa fa-phone fa-2x contact-icon" aria-hidden="true"></i></a>
-									<div class="col-10">
-										<span>Phone:</span> 
-										<a href="tel:<?php echo get_theme_mod( 'phone_number_first' ); ?>"><?php echo get_theme_mod( 'phone_number_first' ); ?></a>
-									</div>
-								</li>
-								<li class="row">
-									<a class="col-2" href="#"><i class="fa fa-map-marker fa-2x contact-icon" aria-hidden="true"></i></a>
-									<div class="col-10">
-										<address>Address: <?php echo get_theme_mod( 'address_text' ); ?></address>
-									</div>
-								</li>
-							</ul>
-							
-							<iframe class="google-map" src="<?php the_field('google_map', 7); ?>" frameborder="0" style="border:0" allowfullscreen></iframe>
-						</div>
-						<div class="col-md-6 footer-style-right-sone">
-							<?php dynamic_sidebar( 'footer-right-sone' ); ?>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="info-about-site">
-						<!-- Your site title as branding in the menu -->
+<footer class="footer-style">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+			<!-- Your site title as branding in the menu -->
 				<?php if ( ! has_custom_logo() ) { ?>
 
 					<?php if ( is_front_page() && is_home() ) : ?>
 
 						<h1 class="navbar-brand mb-0"><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a></h1>
 						
-						<?php else : ?>
+					<?php else : ?>
 
 						<a class="navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>"><?php bloginfo( 'name' ); ?></a>
 					
@@ -64,18 +34,36 @@ $container   = get_theme_mod( 'understrap_container_fluid_type' );
 				<?php } else {
 					the_custom_logo();
 				} ?><!-- end custom logo -->
-			</div>	
-			<div class="copyright">
-				<span><?php echo get_theme_mod( 'copyright_text' ); ?></span>
 			</div>
-
-		</footer><!-- #colophon -->
-	</div><!-- container end -->
-
-</div><!-- wrapper end -->
-
-</div><!-- #page we need this extra closing tag here -->
-
+			<div class="col-md-5">
+				<nav class="hidden-sm-down navbar navbar-expand-md navbar-toggleable-md nav-style">
+				<button class="navbar-toggler navbar-toggler-right nav-button-style" type="button" data-toggle="collapse" data-target="#navbarNavDropdown2" aria-controls="navbarNavDropdown2" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+		
+				<?php wp_nav_menu(
+				array(
+					'theme_location'  => 'primary',
+					'container_class' => 'collapse navbar-collapse',
+					'container_id'    => 'navbarNavDropdown2',
+					'menu_class'      => 'navbar-nav ml-auto',
+					'fallback_cb'     => '',
+					'menu_id'         => 'main-menu',
+					'walker'          => new understrap_WP_Bootstrap_Navwalker(),
+				)
+				); ?>
+				</nav>
+			</div>
+			<div class="col-md-4"><?php dynamic_sidebar( 'footer-right-sone' ); ?>
+			</div>
+		</div>
+	</div>
+	<div class="footer-buttom-style">
+		<div class="container">
+			<span class="d-inline-block"><?php echo get_theme_mod( 'copyright_text' ); ?></span>
+		</div>
+	</div>
+</footer>
 <?php wp_footer(); ?>
 
 </body>

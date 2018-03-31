@@ -1,92 +1,124 @@
 //blog
 
-.blog-home-style {
-	background: url(../img/blog-bg.png) no-repeat center; 
-	background-size: cover;
-	text-align: center;
-	h1 {
-		font-size: 2.8rem;
-		color: $main-font-color;
+.home-style {
+	background-color: $background-section-color;
+	padding-top: 20px;
+	.blog-search {
 		display: inline-block;
-		margin: 40px 0;
-	}
-}
-.element-item {
-    padding: 0 2px 20px;
-    width: 100%;
-}
-
-.main-style {
-	padding-top: 65px;
-}
-
-//Стили для страницы БЛОГ и конкретной статьи
-.article-style {
-	font-size: 0.9rem;
-	h3 {
-		font-size: 2.1rem;
-		line-height: 28px;
-	}
-	img {
-		width: 100%;
-	}
-	.article-block-style {
-		position: relative;
-		border: 1px solid rgba(0,0,0,0.3);
-	}
-	.article-text-style {
-		padding: 15px;
-	}
-	
-	h2 a {
+		float: right;
+		input[type="search"] {
+			background: $main-font-color;
+			padding-left: 15px;
+			font-size: 1.6rem;
+		}
+	}	
+	.breadcrumb-style {
 		font-size: 1.6rem;
+		display: inline-block;
+	}
+}
+
+
+.article-style {
+	background-color: $main-font-color;
+	border: 1px solid $blog-font-color;
+	border-radius: 6px;
+	.article-title-style {
+		font-size: 2.4rem;
 		padding: 15px 0;
 		font-weight: bold;
 		&:hover {
 			color: $main-site-color;
 			text-decoration: none;
 		}
+	}	
+	img {
+		width: 100%;
 	}
-	.article-info {
-		text-align: center;
-		font-size: 1.2rem;
-		color: $article-info-color;
-		border-top: 1px solid rgba(0,0,0,0.3);
-		padding: 15px;
-	}
-	.clock {
-		padding: 0 15px;
-	}
-	
-	.arrow-style {
-		top: 0;
-		right: 0;
-		position: absolute;
-		padding: 7px;
-		background-color: #fff;
-		&:hover {
+	p {
+		font-size: 1.6rem;
+		padding: 20px 0;
+		.see-more-style {
+			font-size: 1.6rem;
+			font-weight: bold;
 			color: $main-site-color;
+			text-transform: uppercase;
+			display: inline-block;
+			&:hover {
+				opacity: 0.7;
+				color: $second-font-color;
+			}
 		}
 	}
-	
 }
+.article-item {
+	margin: 30px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid $blog-font-color;
+}
+.article-item-about {
+	font-size: 1.4rem;
+}
+.autor-style {
+	padding-right: 20px;
+}
+
+.family-img {
+	position: relative;
+	.overlay{
+		position:absolute;
+		top:0;
+		width:0;
+		overflow: hidden;
+		background: $main-site-color;
+		opacity: 0.95;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	&:hover .overlay{
+		animation: portfolio-hover 1s;
+		width:100%;
+		height: 100%;
+	}
+	a {
+		display: inline-block;
+		text-align: center;
+		padding: 13px 30px;
+		color: $main-site-color;
+		background-color: $main-font-color;
+		opacity: 1;
+		font-size: 1.6rem;
+		text-transform: uppercase;
+		&:hover {
+			text-decoration: none;
+			opacity: 0.8;
+		}
+	}
+}
+@keyframes portfolio-hover {
+	0%   { height: 0; }
+	100% { height: 100%; }
+}
+
 
 .pagination-style {
 	padding: 30px 0;
 	.pages-info {
-		font-size: 2.1rem;
+		font-size: 1.6rem;
 		font-weight: bold;
 	}
 	.page-numbers {
 		display: inline-flex;
 		margin-top: 5px;
-		padding: 10px 17px;
-		font-size: 2.4rem;
+		padding: 8px 10px;
+		font-size: 1.6rem;
 		font-weight: bold;
-		color: $main-font-color;
-		background-color: $main-site-color;
+		color: $second-font-color;
 		&:hover, &.active {
-			color: $background-color-icon;
+			color: $main-font-color;
+			background-color: $main-site-color;
+			border-radius: 6px;
 		}
 		
 	}
@@ -96,41 +128,13 @@
 		padding: 0 20px;
 	}
 	
-	.page-numbers .current {
-		//background-color: $additional-color;
-		font-size: 2.0rem;
+	.page-numbers.current {
+		font-size: 1.6rem;
+		color: $main-font-color;
+		background-color: $main-site-color;
+		border-radius: 6px;
 	}
 	.next, .prev {
 		display: none;
-	}
-}
-
-
-@include media-breakpoint-up(md) {
-	.pagination-style {
-		padding: 60px 0;
-		.pages-info {
-			padding-right: 30px;
-		}
-		a.prev-page {
-			padding-right: 40px;
-		}
-		a.next-page {
-			padding-left: 40px;
-		}
-	}
-
-	.blog-home-style {
-		h1 {
-			padding: 22px 200px 22px 22px;
-			font-size: 3.6rem;
-		}
-	}
-}
-
-@include media-breakpoint-up(lg) {
-	.element-item {
-		padding: 0 2px 20px;
-		width: 49%;
 	}
 }

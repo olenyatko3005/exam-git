@@ -79,7 +79,5 @@ add_action( 'widgets_init', 'remove_widgets', 11 );
 require_once('inc/widgets.php');
 require_once('inc/customizer.php');
 require_once('inc/cpt.php');
-require_once('inc/taxonomy.php');
 require_once('inc/setup.php');
 require_once('inc/breadcrumb.php');
-//require_once('inc/breadcrumb.php');

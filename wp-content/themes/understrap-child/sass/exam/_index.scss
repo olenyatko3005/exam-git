@@ -1,225 +1,188 @@
 //index
-
-.slider {
-	background-color: green;
-	.slick-client {
-		width: 97%;
-		margin: 30px auto;
-	}
-	.slick-slider .slick-next, .slick-slider .slick-prev {
-		background-color: #424147;
-		color: #fff;
-		width: 26px;
-		height: 60px;
-	}
+.wrapper {
+	padding: 0;
+	margin: 0;
 }
-.toggler { 
-	width: 500px; 
-	/*height: 200px; */
-	position: relative; 
-}
-#button { 
-	padding: .5em 1em; 
-	text-decoration: none; 
-}
-#effect { width: 240px; /*height: 170px;*/ padding: 0.4em; position: relative; background: #fff; }
-#effect h3 { margin: 0; padding: 0.4em; text-align: center; }
+.section-title-style {
+	padding: 30px 0;
+	margin-bottom: 40px;
+	font-size: 4rem;
+	border-bottom: 3px solid $main-site-color;
+	display: inline-block;
 	
-//tabs-style
-.offering-style {
-	.nav-tabs .tabs-style {
-		display: block;
-		padding: 10px;
-	}
-	.nav-tabs .tabs-style.active {
-		outline: none;
-		color: $main-site-color;
-		border-bottom: 3px solid $main-site-color;
-		background-color: #fff;
-		border-color: #dee2e6 #dee2e6 #fff;
-	}
 }
-.why-us-style {
-	background-color: $main-site-color;
+
+.story-style {
+	background-size: cover;
 	color: $main-font-color;
 	padding: 30px 0 30px;
-	h1 {
+	text-align: center;
+	.story-title {
 		font-size: 6rem;
 		padding: 20px 0;
 	}
-	h2 {
-		font-size: 4.8rem;
-	}
-	.why-us-about-style {
-		font-size: 3rem;
-	}
-	p {
-		font-size: 2.4rem;
-		padding: 20px 0;
-	}
-	.why-us-humbnail-style {
-		text-align: center;
-		max-width: 100%;
-	}
-	.why-us-color {
-		color: $background-color-nav;
-	}
-	.why-us-link {
-		color: $main-font-color;
-		padding-top: 30px;
-	}
-}
-
-.welcome-style {
-	padding-top: 55px;
-	color: $second-site-color;
-	.welcome-style-humbnail-style {
-		text-align: center;
-		max-width: 100%;
-	}
-	h2 {
-		padding: 20px 0 0;
-		font-size: 3.6rem;
-	}
-	p {
+	.story-text {
 		font-size: 1.8rem;
 		padding: 20px 0;
 	}
-	a {
-		font-size: 1.8rem;
-		font-weight: bold;
-		color: $main-site-color;
+	.story-link {
+		color: $second-font-color;
+		padding: 30px 40px;
+		margin-top: 60px;
+		font-size: 1.6rem;
+		background-color: $main-site-color;
+		text-transform: uppercase;
+		display: inline-block;
+		border-radius: 4px;
+		&:hover {
+			opacity: 0.7;
+			background-color: $second-font-color;
+			color: $main-site-color;
+		}
 	}
 }
 
-.offering-style {
+.process-style {
 	text-align: center;
-	background-color: $second-site-color;
-	color: $main-font-color;
-	h2 {
-		padding: 30px 0;
-		font-size: 3.6rem;
-	}
-	p {
-		font-size: 1.8rem;
-		padding: 10px 0;
-	}
-	h4 {
+	//color: $main-font-color;
+	.process-image-title-style {
 		padding: 15px 0;
-		font-size: 3rem;
+		font-size: 2rem;
+		font-weight: bold;
+	}
+	.process-text-style {
+		font-size: 1.6rem;
+		padding: 10px 0;
 	}
 }	
-.client-style {
-	padding: 30px 0 60px;
-	text-align: center;
-	color: $main-font-color;
-	background-color: $main-site-color;
-	h2 {
+
+
+.about-style {
+	padding: 70px 0;
+	background-color: $background-section-color;
+	.about-style-text {
+		font-size: 1.6rem;
+	}
+	.about-description {
+		color: $second-font-color;
 		padding: 30px 0;
-		font-size: 3.6rem;
 	}
-	a {
-		display: inline-block;
-		padding: 20px;
-	}
-	.saturate {
-		filter: brightness(0) invert(1);
+	.about-link {
+		font-size: 1.6rem;
+		margin-top: 30px;
+		color: $main-site-color;
+		text-transform: uppercase;
+		border-radius: 30px;
 		&:hover {
-			filter: none;
+			opacity: 0.7;
+			color: $second-font-color;
 		}
 	}
 }
 
-.work-style {
+.build-style {
+	color: $second-font-color;
+	padding: 30px 0 30px;
+	.build-title {
+		font-size: 6rem;
+		padding: 20px 0;
+	}
+	.build-text {
+		font-size: 1.8rem;
+		padding: 20px 0;
+		font-weight: bold;
+	}
+	.build-link {
+		color: $second-font-color;
+		padding: 30px 40px;
+		margin-top: 60px;
+		font-size: 1.6rem;
+		background-color: $main-site-color;
+		text-transform: uppercase;
+		display: inline-block;
+		border-radius: 4px;
+		&:hover {
+			opacity: 0.7;
+			background-color: $second-font-color;
+			color: $main-site-color;
+		}
+	}
+}
+
+
+.family-style {
 	text-align: center;
-	h2 {
-		font-size: 3.6rem;
+	//color: $main-font-color;
+	.family-info-title-style {
+		padding: 15px 0;
+		font-size: 2.4rem;
+		font-weight: bold;
 	}
 	p {
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 		padding: 10px 0;
 	}
-	.work-nav {
-		font-size: 2.9rem;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
+	.family-info {
+		text-align: left;
 	}
-	.work-item-button {
-		padding: 0 5px;
-	}
-	.button {
-		font-size: 2.4rem;
-		background-color: Transparent;
-		border: none;
-		cursor: pointer;
-		&:hover, &:focus {
-			outline: none;
-			color: $main-site-color;
-			border-bottom: 3px solid $main-site-color;
-		}
-	}
-	.work-item-img {
-		padding: 30px 10px;
-	}
-	
-	img {
-		width: 100%;
-	}
-}
-
-.work-img {
-	position: relative;
-	.overlay{
-		position:absolute;
-		top:0;
-		width:0;
-		overflow: hidden;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	&:hover .overlay{
-		width:100%;
-		height: 100%;
-	}
-	a {
-		font-size: 3rem;
-		display: inline-block;
-		text-align: center;
+	.family-link {
+		font-size: 1.6rem;
+		margin: 30px 0;
+		color: $main-site-color;
 		text-transform: uppercase;
-		padding: 105px 90px;
-		color: #000;
-		border: 10px solid rgba(255,255,255,0.5);
+		display: inline-block;
 		&:hover {
-			text-decoration: none;
+			opacity: 0.7;
+			color: $second-font-color;
 		}
 	}
-}
+}	
+
+
+.testimonials-style {
+	text-align: center;
+	background-color: $background-section-color;
+	p {
+		font-size: 1.6rem;
+		padding: 10px 0;
+	}
+	.testimonials-info {
+		text-align: left;
+	}
+	.testimonials-name {
+		color: $main-site-color;
+	}
+	.testimonials-link {
+		font-size: 1.6rem;
+		margin: 30px 0;
+		color: $main-site-color;
+		text-transform: uppercase;
+		display: inline-block;
+		&:hover {
+			opacity: 0.7;
+			color: $second-font-color;
+		}
+	}
+	.testimonials-bottom {
+		font-size: 1.8rem;
+	}
+	.testimonials-info-block {
+		background-color: $main-font-color;
+	}
+}	
+
+
+
+
 
 @include media-breakpoint-up(md) {
-	.why-us-style {
-		padding: 130px 0 45px;
-	}
-	.welcome-style {
-		h2 {
-			padding: 20px 0 20px;
-		}
-	}
-	.work-item-button {
-		padding: 15px 20px;
-	}
-	.offering-style {
+	.story-style {
 		padding: 70px 50px;
-		p {
-			padding: 10px 50px;
-		}
 	}
-	.work-style {
-		padding: 60px 0;
-		p {
-			padding: 10px 80px;
-		}		
+	.about-style {
+		.about-style-text {
+			padding-right: 40px;
+		}
 	}
 }
 	

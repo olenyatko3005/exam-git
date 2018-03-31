@@ -118,7 +118,8 @@ if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	 */
 	function understrap_all_excerpts_get_more_link( $post_excerpt ) {
 
-		return $post_excerpt . ' <p></p>';
+				return $post_excerpt . ' <p><a class="see-more-style" href="' . esc_url( get_permalink( get_the_ID() )) . '">' . __( 'See More',
+		'understrap' ) . '</a></p>';
 	}
 }
 add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
